@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .linkdestacacursos {
+            background-color: #F00;
+        }
+        
+        a {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        table {
+            text-align: center;
+            border: none;
+        }
+        
+        td {
+            border: none;
+        }
+        
+        #contieneEnlaces {
+            position: absolute;
+            left: 31px;
+            top: 65px;
+            width: 400px;
+            height: 649px;
+            z-index: 1;
+            padding-top: 100px;
+        }
+    </style>
+    <script src="Jquery/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            // $("a[href^='http://']").addClass("linkdestacacursos");
+            document.getElementById("cursos").addEventListener("click", resaltacursos, false);
+            document.getElementById("informacion").addEventListener("click", resaltarejemplos, false);
+        });
+
+        function resaltacursos() {
+            $(".ejemplos").removeClass("linkdestacacursos")
+            $(".cursos").addClass("linkdestacacursos");
+        }
+
+        function resaltarejemplos() {
+            $(".cursos").removeClass("linkdestacacursos")
+            $(".ejemplos").addClass("linkdestacacursos");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="contieneEnlaces">
+        <ul>
+            <li>
+                <a href="http://www.pildorasinformaticas.com" target="_blank" class="cursos">Pildoras informáticas Youtube</a>
+            </li>
+            <li>
+                <a href="http://www.google.com" target="_blank">Google</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/user/pildorasinformaticas" target="_blank" class="cursos"> Pildoras informáticas Youtube</a>
+            </li>
+            <li>
+                <a href="remover_reemplazar.html" target="_blank" class="ejemplos">Remover y reemplazar</a>
+            </li>
+            <li>
+                <a href="https://news.google.es/" target="_blank">Noticias google</a>
+            </li>
+            <li>
+                <a href="calculadora_arcaica.html" target="_blank" class="ejemplos">Calculadora</a>
+            </li>
+        </ul>
+
+    </div>
+    <table width="100%" border="1">
+        <tr>
+            <td>Cursos destacados&nbsp;<input type="button" value="Cursos" id="cursos"></td>
+            <td>Informacion adicional&nbsp;<input type="button" value="Información" id="informacion"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
