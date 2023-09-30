@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        p {
+            font-size: 22px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: justify;
+        }
+        
+        #links {
+            width: 20%;
+            margin-left: 45px;
+            border: dashed#0000FF 2px;
+            float: left;
+            padding-bottom: 200px;
+            padding-left: 20px;
+        }
+        
+        #links h2 {
+            text-align: center;
+        }
+        
+        #ultimos {
+            width: 75%;
+            float: left;
+        }
+        
+        li {
+            font-weight: bold;
+            font-size: 10px;
+        }
+    </style>
+    <script src="Jquery/jquery-1.6.3.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("a[href^='https://']").each(function() {
+                var linkExterno = $(this).attr("href");
+                $("#links").append("<li>" + linkExterno + "</li>");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Utilizando la funcion each</h1>
+    <p>Lorem ipsum dolor sit amet <a href="https://www.gmail.es">Ir a gmail</a>consectetur adipisicing elit. At et ducimus aspernatur, optio est magni excepturi sunt vitae? Similique tempora, pariatur impedit laboriosam nam laborum possimus inventore libero
+        aut! Laudantium. </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam enim tempora ullam qui ad velit tenetur, nisi ratione culpa aperiam soluta, sint reprehenderit quisquam earum temporibus esse omnis error eos.</p>
+    <div id="ultimos">
+        <p>Lorem ipsum dolor sit <a href="https://news.gooogle.es">Ir a google news</a> amet consectetur, adipisicing elit. Dignissimos, commodi hic officiis laudantium ut repellendus aut adipisci consectetur unde mollitia tenetur praesentium eius voluptatum
+            porro libero repellat deleniti architecto sapiente?
+        </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem esse optio dignissimos modi
+            <a href="https://inventado.com">Ir a la pagina invengada</a>commodi ea in nisi quia vero ex autem earum quae illum veniam, perspiciatis reiciendis, magni praesentium minima. </p>
+        <p>Lorem ipsum
+            <a href="https://www.google.es/maps">Ir a maps</a>dolor sit amet consectetur adipisicing elit. Eius, dignissimos veniam? Similique, sed ducimus unde minus labore, nulla quo ipsa inventore placeat doloribus nihil voluptatibus, ab quas quasi
+            blanditiis cupiditate.
+        </p>
+    </div>
+    <div id="links">
+        <h2>Links Utilizados</h2>
+    </div>
+</body>
+
+</html>

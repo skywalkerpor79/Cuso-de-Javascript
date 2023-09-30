@@ -7,7 +7,10 @@
     <title>Document</title>
     <style>
         .linkdestacacursos {
-            background-color: #F00;
+            /* background-color: #F00; */
+            color: #F00;
+            font-weight: bold;
+            margin-left: 25px;
         }
         
         a {
@@ -46,11 +49,13 @@
         function resaltacursos() {
             $(".ejemplos").removeClass("linkdestacacursos")
             $(".cursos").addClass("linkdestacacursos");
+            // $(".cursos").toggleClass("linkdestacacursos");
         }
 
         function resaltarejemplos() {
             $(".cursos").removeClass("linkdestacacursos")
             $(".ejemplos").addClass("linkdestacacursos");
+            // $(".ejemplos").toggleClass("linkdestacacursos");
         }
     </script>
 
@@ -82,8 +87,12 @@
     </div>
     <table width="100%" border="1">
         <tr>
-            <td>Cursos destacados&nbsp;<input type="button" value="Cursos" id="cursos"></td>
-            <td>Informacion adicional&nbsp;<input type="button" value="Información" id="informacion"></td>
+            <!-- <td>Cursos destacados&nbsp;<input type="button" value="Cursos" id="cursos"></td>
+            <td>Informacion adicional&nbsp;<input type="button" value="Información" id="informacion"></td> -->
+            <!-- <td>Cursos destacados&nbsp;<input type="checkbox" value="Cursos" id="cursos"></td>
+            <td>Informacion adicional&nbsp;<input type="checkbox" value="Información" id="informacion"></td> -->
+            <td>Cursos destacados&nbsp;<input type="radio" name="misbotones" value="Cursos" id="cursos"></td>
+            <td>Informacion adicional&nbsp;<input type="radio" name="misbotones" value="Información" id="informacion"></td>
         </tr>
     </table>
 </body>
