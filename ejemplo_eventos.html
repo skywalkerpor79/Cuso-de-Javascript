@@ -1,0 +1,81 @@
+<!--
+Eventos de raton:
+click   dblclick    mousedown   mouseup    mouseover
+Mouseout    Mousemove
+
+Eventos de teclado:
+keypress    keydown
+
+Eventos de documento o ventana:
+load    resize  scroll  unload
+
+Eventos de formulario:
+submit  reset   change  focus   blur
+
+Gestion de eventocs con jquery
+
+$("img").click(funcion a ejecutar);
+
+("img")->aqui iria el objeto en este caso img
+.click el evento
+
+Ejemplo:
+$("image").click(aviso);
+
+function aviso(){
+    alert("Has pulsado la imagen");
+}
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a eventos</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        body {
+            background-color: #334873;
+            color: #FFF;
+        }
+        
+        #principal {
+            width: 60%;
+            margin: auto;
+        }
+        
+        a {
+            color: #FFF;
+            font: bold 20px Verdana, Geneva, sans-serif;
+        }
+    </style>
+    <script src="Jquery/jquery-1.6.3.min.js"></script>
+    <script>
+    </script>
+
+</head>
+
+<body>
+
+    <div id="principal">
+        <p>
+            <a href="#">Un link</a>
+        </p>
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Formulario</legend>
+                <p>
+                    <input name="button" type="button" id="el_boton" value="Un boton">
+                </p>
+                <p><input name="textfield" type="text" id="el_campo"></p>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
